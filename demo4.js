@@ -25,7 +25,7 @@ app.use(async (ctx) => {
         ctx.body = html;
     } else if (ctx.url === '/' && ctx.method === 'POST') {
         let postData =  ctx.request.body
-
+        console.log(postData)
         ctx.body = postData
     } else {
         ctx.body = '<h1>404</h1>'
