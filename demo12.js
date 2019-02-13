@@ -4,7 +4,7 @@
  * data: 2019.2.12
  */
 /**
- *npm install --save koa-static
+ *npm install --save koa-static [通过http://localhost:3000/1.png直接访问]
  */
 
 const Koa = require('koa')
@@ -18,8 +18,7 @@ const staticPath = './static'
 app.use(static(path.join(__dirname, staticPath)))
 
 app.use(async(ctx) => {
-    let title = 'hello Koa2'
-    await ctx.render('index', {title})
+    ctx.body = 'hello guoguo'
 })
 
 app.listen(3000, () => {
